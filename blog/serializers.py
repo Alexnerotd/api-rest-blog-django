@@ -15,4 +15,13 @@ class BlogSerializerPOST(ModelSerializer):
 
         blog = Blog.objects.create(author=user, **validate_data)
         return blog
+    
+
+class BlogSerializerGET(ModelSerializer):
+
+    class Meta:
+        model = Blog
+        fields = '__all__'
+
+
      
