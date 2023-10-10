@@ -6,8 +6,8 @@ from authentication.models import MyUser
 
 class Blog(models.Model):
     author = models.ForeignKey(MyUser, on_delete=models.CASCADE)
-    title = models.CharField("Titulo", max_length=50, unique=True)
-    description = models.CharField("Descripcion", max_length=50, unique=True)
+    title = models.CharField("Title", max_length=50, unique=True)
+    description = models.CharField("Description", max_length=50, unique=True)
     content = models.TextField()
 
 
